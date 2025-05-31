@@ -24,12 +24,11 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             {/* Public Routes */}
-            <Route path="/" element={<Index />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
             {/* Learner Pages (no auth required) */}
-            <Route path="/app" element={<DashboardLayout />}>
+            <Route path="/" element={<DashboardLayout />}>
               <Route index element={<Dashboard />} />
               <Route path="courses" element={<MyCourses />} />
               <Route
