@@ -15,6 +15,9 @@ import {
 import { cn } from "@/lib/utils";
 import { useUIStore } from "@/store/uiStore";
 import { XPProgressBar } from "@/components/ui/XPProgressBar";
+import "./HeroCard.css";
+import logo from "./avatar.jpg";
+import image from "./hh.jpg";
 
 // Static user (default to learner)
 const user = {
@@ -225,6 +228,24 @@ export const DashboardLayout: React.FC = () => {
         </header>
 
         <main className="flex-1 overflow-auto">
+          <div className="flex flex-wrap justify-center py-10">
+            <div className="first hero">
+              <img src={image} alt="" className="image" />
+              <div className="text"></div>
+              <div className="logo">
+                <img src={logo} alt="Logo" />
+              </div>
+              <div className="main-text">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+              <div className="date">
+                <p>30.11.2022</p>
+              </div>
+              <div className="hero-btn">
+                <a href="#">Learn More</a>
+              </div>
+            </div>
+          </div>
           <Outlet />
         </main>
       </div>
